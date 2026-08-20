@@ -1,0 +1,122 @@
+.auth-screen {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.auth-showcase {
+  position: relative;
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: radial-gradient(
+      circle at 20% 20%,
+      rgba(61, 220, 151, 0.22),
+      transparent 50%
+    ),
+    radial-gradient(circle at 90% 80%, rgba(255, 107, 74, 0.2), transparent 50%),
+    linear-gradient(165deg, var(--panel-light), var(--ink));
+  overflow: hidden;
+}
+
+.auth-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(243, 239, 230, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+  mask-image: radial-gradient(circle at 30% 30%, black, transparent 70%);
+}
+
+.auth-showcase-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-showcase-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 420px;
+}
+
+.auth-showcase-copy h1 {
+  font-size: 2.6rem;
+  line-height: 1.05;
+  margin-bottom: 16px;
+}
+
+.auth-showcase-copy p {
+  color: var(--sage);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.auth-heartbeat {
+  position: relative;
+  z-index: 1;
+  height: 60px;
+  opacity: 0.8;
+}
+
+.auth-form-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 34px 32px;
+}
+
+.auth-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.auth-card .eyebrow {
+  margin-bottom: 8px;
+  display: block;
+}
+
+.auth-subtitle {
+  color: var(--sage);
+  font-size: 0.88rem;
+  margin-bottom: 24px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--sage);
+}
+
+.auth-switch a {
+  color: var(--pulse);
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .auth-screen {
+    grid-template-columns: 1fr;
+  }
+  .auth-showcase {
+    display: none;
+  }
+}

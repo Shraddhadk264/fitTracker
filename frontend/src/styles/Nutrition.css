@@ -1,0 +1,82 @@
+.macro-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.meal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.meal-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+}
+
+.meal-row-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 107, 74, 0.14);
+  color: var(--ember);
+  flex-shrink: 0;
+}
+
+.meal-row-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.meal-row-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.meal-row-meta {
+  font-size: 0.78rem;
+  color: var(--sage);
+  margin-top: 2px;
+}
+
+.meal-row-macros {
+  display: flex;
+  gap: 10px;
+  font-size: 0.72rem;
+  color: var(--sage-dim);
+  font-family: var(--font-mono);
+}
+
+.meal-row-cals {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--sand);
+  flex-shrink: 0;
+}
+
+.meal-row-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.date-picker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.date-picker input {
+  background: rgba(10, 31, 29, 0.55);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  padding: 9px 12px;
+  color: var(--sand);
+  font-size: 0.86rem;
+}

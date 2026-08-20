@@ -1,0 +1,150 @@
+:root {
+  /* Color tokens */
+  --ink: #0a1f1d;
+  --ink-soft: #0f2b27;
+  --panel: #123331;
+  --panel-light: #17403c;
+  --pulse: #3ddc97;
+  --pulse-dim: #2ba876;
+  --ember: #ff6b4a;
+  --ember-dim: #d9502f;
+  --sand: #f3efe6;
+  --sand-dim: #cfc8b8;
+  --sage: #8fb3a6;
+  --sage-dim: #5b7b70;
+  --line: rgba(243, 239, 230, 0.1);
+  --glass-fill: rgba(243, 239, 230, 0.06);
+  --glass-border: rgba(243, 239, 230, 0.14);
+  --danger: #ff6b6b;
+
+  /* Type */
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Layout */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --sidebar-w: 240px;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: radial-gradient(
+      circle at 12% -10%,
+      rgba(61, 220, 151, 0.16),
+      transparent 45%
+    ),
+    radial-gradient(circle at 90% 0%, rgba(255, 107, 74, 0.12), transparent 40%),
+    var(--ink);
+  color: var(--sand);
+  font-family: var(--font-body);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: var(--font-body);
+}
+
+::selection {
+  background: var(--pulse);
+  color: var(--ink);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--panel-light);
+  border-radius: 999px;
+}
+
+.glass {
+  background: linear-gradient(
+    160deg,
+    var(--glass-fill),
+    rgba(243, 239, 230, 0.02)
+  );
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-radius: var(--radius-lg);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--pulse);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,61 @@
+.profile-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+}
+
+.profile-card {
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.profile-avatar-lg {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+  background: linear-gradient(135deg, var(--ember), var(--ember-dim));
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.profile-card h3 {
+  font-size: 1.1rem;
+}
+
+.profile-card p {
+  color: var(--sage);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+.profile-form-panel {
+  padding: 26px;
+}
+
+.form-section-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 22px 0 12px;
+  color: var(--sand);
+}
+
+.form-section-title:first-child {
+  margin-top: 0;
+}
+
+.save-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.save-confirm {
+  color: var(--pulse);
+  font-size: 0.84rem;
+  font-weight: 600;
+}

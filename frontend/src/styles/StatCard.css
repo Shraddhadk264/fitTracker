@@ -1,0 +1,64 @@
+.stat-card {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  transition: transform 0.18s ease, border-color 0.18s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+}
+
+.accent-pulse .stat-icon {
+  background: rgba(61, 220, 151, 0.14);
+  color: var(--pulse);
+}
+
+.accent-ember .stat-icon {
+  background: rgba(255, 107, 74, 0.14);
+  color: var(--ember);
+}
+
+.accent-sage .stat-icon {
+  background: rgba(143, 179, 166, 0.14);
+  color: var(--sage);
+}
+
+.stat-trend {
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  color: var(--sage);
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--sand);
+}
+
+.stat-value small {
+  font-size: 0.9rem;
+  color: var(--sage);
+  margin-left: 3px;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--sage);
+}

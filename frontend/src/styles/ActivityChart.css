@@ -1,0 +1,23 @@
+.activity-chart {
+  width: 100%;
+}
+
+.chart-tooltip {
+  background: var(--panel);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.chart-tooltip-day {
+  font-size: 0.72rem;
+  color: var(--sage);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.chart-tooltip-value {
+  font-size: 0.9rem;
+  color: var(--pulse);
+  font-weight: 600;
+}
